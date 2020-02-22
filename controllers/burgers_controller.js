@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-var cat = require("../models/burger.js");
+var burger = require("../models/burger.js");
 
 router.get("/", function(req, res) {
     burger.selectAll(function(data) {
@@ -39,19 +39,6 @@ router.get("/", function(req, res) {
     });
   });
 
-
- /* router.delete("/:id",function(req,res){
-      var condition="id = "+req.params.id;
-      console.log(condition);
-      burger.delete(condition,function(result){
-        if (result.changedRows == 0) {
-            return res.status(404).end();
-          } else {
-            res.status(200).end();
-          }
-      })
-  })
-*/
 
   router.delete("/:id", function(req, res) {
     var condition = "id = "+req.params.id;

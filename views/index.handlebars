@@ -1,18 +1,54 @@
 <div class="container">
     <div class="jumbotron">
         <h1>Eat-Da-Burger</h1>
-        <p>Make the burger.</p>
-        <p>Eat the burger</p>
-        <h2>Make the Burger</h2>
-        <panel>
-            <form class="createBurger-Form">
-                <div class="formGroup">
-                    <label for="newBurger">Make your burger</label>
-                    <input type="text" id="newBurger" name="burger">
-                    <button type="submit" class="btn btn-success" id="addBurger">submit</button>
-                </div>
+        
 
-            </form>
-        </panel>
     </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="undevouredBurgers">
+                <ul class="burgerList">
+                     {{#each burger}}
+
+                    {{#unless devoured}}
+                        <strong> {{this.id}} -{{this.burger_name}}</strong>
+                        <button type="btn" class="eatBurger" id="devourButton" data-id="{{this.id}}" data-newdevoured="{{devoured}}">Devour Burger</button>
+                        </br>
+                        </br>
+                    {{/unless}}
+
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="devouredBurgers">
+                <ul class="devouredBurgerList">
+                     {{#each burger}}
+
+                    {{#if devoured}}
+                        <strong> {{this.id}} -{{this.burger_name}}</strong>
+                        </br>
+                        </br>
+                    {{/if}}
+
+                    {{/each}}
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <panel>
+          <h2>Make the Burger</h2>
+        <form class="createBurger-Form">
+            <div class="formGroup">
+                <label for="newBurger">Make your burger</label>
+                <input type="text" id="newBurger" name="burger">
+                <button type="submit" class="btn btn-success" id="addBurger">submit</button>
+            </div>
+        </form>
+    </panel>
+</div>
 </div>
