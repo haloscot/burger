@@ -1,0 +1,33 @@
+body {
+  background-color: rgb(207, 140, 16);
+}
+
+#title{
+    text-align: center;
+
+
+}
+h1{
+    text-decoration: orange;
+    margin: 50px;
+}
+
+#devouerdBurgersList{
+    background-color: palegoldenrod;
+    margin: 0em;
+    padding: 5px;
+}
+#undevouerdBurgersList{
+
+  margin: 10px;
+}
+#devourButton{
+
+  margin-inline-end: 0em;
+  background-color: palegoldenrod;
+}
+
+.formGroup{
+    text-align: center;
+    margin: 50px;
+} 

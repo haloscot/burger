@@ -1,9 +1,10 @@
 <div class="container">
-    <div class="jumbotron">
+    <div id="title">
         <h1>Eat-Da-Burger</h1>
-        
+        <img alt="burger image" class="n3VNCb" src="../public/assests/img/burger.jpg">
 
     </div>
+
     <div class="row">
         <div class="col-sm-6">
             <div class="undevouredBurgers">
@@ -11,7 +12,7 @@
                      {{#each burger}}
 
                     {{#unless devoured}}
-                        <strong> {{this.id}} -{{this.burger_name}}</strong>
+                        <strong  id="undevouerdBurgersList"> {{this.id}} -{{this.burger_name}}</strong>
                         <button type="btn" class="eatBurger" id="devourButton" data-id="{{this.id}}" data-newdevoured="{{devoured}}">Devour Burger</button>
                         </br>
                         </br>
@@ -27,7 +28,7 @@
                      {{#each burger}}
 
                     {{#if devoured}}
-                        <strong> {{this.id}} -{{this.burger_name}}</strong>
+                        <h6 id="devouerdBurgersList"> {{this.id}} -{{this.burger_name}}</h6>
                         </br>
                         </br>
                     {{/if}}
@@ -41,10 +42,10 @@
     </div>
 
     <panel>
-          <h2>Make the Burger</h2>
+          
         <form class="createBurger-Form">
             <div class="formGroup">
-                <label for="newBurger">Make your burger</label>
+                <h3 for="newBurger">Make your burger</h3>
                 <input type="text" id="newBurger" name="burger">
                 <button type="submit" class="btn btn-success" id="addBurger">submit</button>
             </div>

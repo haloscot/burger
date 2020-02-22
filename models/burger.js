@@ -18,11 +18,11 @@ var burger={
           });
 
       },
-      delete: function( condition, cb) {
-        orm.delete("burger",condition, function(res) {
-          cb(res);
-        });
-      },
+      // delete: function( condition, cb) {
+      //   orm.delete("burger",condition, function(res) {
+      //     cb(res);
+      //   });
+      // },
 }
 
 module.exports=burger; 
